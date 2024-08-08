@@ -1,0 +1,300 @@
+html {
+    overflow-y: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+
+
+.nav {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    color: black;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 60px;
+}
+
+.nav::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 45px;
+    width: 2px;
+    height: 60px;
+    background-color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin-right: 80px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+
+.sidebar {
+    width: 80px;
+    max-height: 500px;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    align-items: center;
+    padding-top: 10px;
+    border-radius: 500px;
+    position: fixed;
+    left: 0;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.nave {
+    justify-content: center;
+    display: block;
+    align-items: center;
+}
+
+.middle-container {
+    display: flex;
+    margin-left: 150px;
+}
+
+.nav {
+    width: 100%;
+
+}
+
+.nav-item {
+    display: block;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+
+}
+
+.nav-item:hover {
+    background-color: white;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    color: #000;
+}
+
+.container-personnaliser {
+    width: 100%;
+    margin: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.profile-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #10101048;
+    border-radius: 80px;
+    background-color: #6666661d;
+
+
+}
+
+.profile-header div {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.profile-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-header p {
+    margin: 5px 0 0;
+}
+
+.profile-header button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-header button:hover {
+    background-color: #00000096;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 2px solid #10101048;
+    border-radius: 80px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #6666661d;
+
+
+}
+
+.profile-info div {
+    text-align: center;
+}
+
+.contact-info {
+    background-color: #6666661d;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #10101048;
+
+
+}
+
+.settings-section {
+    margin-bottom: 20px;
+    border: 2px dashed rgba(0, 0, 0, 0.187);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.setting-section-titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.176);
+}
+
+.setting-section-titre h4 {
+    border-radius: 10px 10px 25px 10px;
+    border: none;
+    background-color: rgba(20, 231, 20, 0.813);
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.setting-section-titre h4:hover {
+    background-color: rgba(92, 246, 92, 0.753);
+    border-radius: 10px;
+}
+
+
+.contact-info p,
+.settings-section p {
+    margin: 0;
+}
+
+.settings-section h3 {
+    margin: 0 0 10px;
+}
+
+.settings-section .setting {
+    margin-bottom: 20px;
+}
+
+.settings-section .setting label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.settings-section .setting label span {
+    margin-right: 10px;
+}
+
+.settings-section .setting .description {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.settings-section .setting input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+.settings-section .setting .delete-account {
+    color: white;
+    background: rgb(91, 2, 2);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.settings-section .setting .delete-account:hover {
+    background-color: red;
+}
+
+.setting-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.langue-select {
+    margin-left: 220px;
+}
+
+.description-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.btn-logout {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px 10px 20px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #876db1ab;
+    border-radius: 10px;
+}

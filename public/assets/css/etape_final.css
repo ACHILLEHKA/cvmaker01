@@ -1,0 +1,495 @@
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: space-between;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(5deg, rgba(33, 1, 240, 0.785), rgba(233, 98, 121, 0.861)); */
+    background-color: #ccc;
+}
+
+.animation-container {
+    width: 30%;
+    height: 450px;
+    filter: url(#goo);
+}
+
+.form-container h2 span {
+    background-color: rgb(249, 255, 80);
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom-right-radius: 25px;
+}
+
+.custom-dot {
+    width: 90px;
+    height: 90px;
+    border-radius: 0% 50% 50% 0%;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.custom-dot-3 {
+    background-color: #ff177f;
+    animation: dot-3-move 2s ease infinite, index 6s ease infinite;
+}
+
+.custom-dot-2 {
+    animation: dot-2-move 2s ease infinite, index 6s -4s ease infinite;
+}
+
+.custom-dot-1 {
+    background-color: #eeff00;
+    animation: dot-1-move 2s ease infinite, index 6s -2s ease infinite;
+}
+
+@keyframes dot-3-move {
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: translateY(-18px) scale(0.45);
+    }
+
+    60% {
+        transform: translateY(-90px) scale(0.45);
+    }
+
+    80% {
+        transform: translateY(-90px) scale(0.45);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes dot-2-move {
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: translate(-16px, 12px) scale(0.45);
+    }
+
+    60% {
+        transform: translate(-80px, 60px) scale(0.45);
+    }
+
+    80% {
+        transform: translate(-80px, 60px) scale(0.45);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes dot-1-move {
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: translate(16px, 12px) scale(0.45);
+    }
+
+    60% {
+        transform: translate(80px, 60px) scale(0.45);
+    }
+
+    80% {
+        transform: translate(80px, 60px) scale(0.45);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
+
+@keyframes rotate-move {
+    55% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes index {
+
+    0%,
+    100% {
+        z-index: 3;
+    }
+
+    33.3% {
+        z-index: 2;
+    }
+
+    66.6% {
+        z-index: 1;
+    }
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 700px;
+    max-height: 500px;
+    background-color: white;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.photo-input-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.photo-input-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photo-input-wrapper input[type="file"] {
+    display: none;
+}
+
+.photo-input-wrapper label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.upload-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.infop {
+    flex: 1;
+}
+
+.infop label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.infop input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.infogrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.field-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.field-wrapper label {
+    margin-bottom: 5px;
+}
+
+.field-wrapper input,
+.field-wrapper select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+
+.submitBtn {
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+    letter-spacing: 0.7px;
+    margin-top: 10px;
+    margin-left: 580px;
+}
+
+.submitBtn:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.260, 0.470, 0.460, 0.950) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.submitBtn:active {
+    transform: scale(0.97);
+}
+
+.formation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 100px 10px;
+    padding: 10px;
+    border: 3px dashed rgba(0, 0, 0, 0.523);
+}
+
+.formation-container-btn button {
+    width: 110px;
+    height: 40px;
+    border-radius: 15px;
+
+    border-bottom-right-radius: 40px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+
+}
+
+.formation-container-btn button:hover {
+    background-color: rgba(25, 25, 25, 0.703);
+    color: white;
+    transition: .5s;
+    border-radius: 15px;
+}
+
+.formation-container2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+
+}
+
+
+
+/* Styles communs pour les boutons */
+.submit-button {
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+    letter-spacing: 0.7px;
+}
+
+.submit-button:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.260, 0.470, 0.460, 0.950) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.submit-button:active {
+    transform: scale(0.97);
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    /* Space buttons out */
+    margin-top: 180px;
+    /* Adjust top margin as needed */
+}
+.btnse {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    /* Space buttons out */
+    /* Adjust top margin as needed */
+}
+
+
+
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: none;
+}
+label{
+    outline: none;
+}
+
+.languages-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.select-one {
+width: 400px;
+font-weight: 600;
+font-size: 15px;
+}
+.select-two{
+    font-weight: 300;
+font-size: 15px;
+}
+
+.formation-container-btn1 button{
+padding: 10px;
+margin-top: 25px;
+border-radius:10px 10px 25px 10px  ;
+background-color: #000;
+border: none;
+color: white;
+width: 100px;
+}
+
+.formation-container-btn1 button:hover{
+    border-radius:10px ;
+background-color: #000000a6;
+}
+
+.competence-group{
+    display: flex;
+}
+
+.competence-section{
+    margin-top: 10px;
+    display: flex;
+}
+
+.input1{
+    width: 500px;
+
+}
+select{
+    outline: none;
+}
+
+.profil input{
+width: 563px;
+border-radius: 5px;
+}
+
+.texte-area{
+    width: 630px;
+    height: 200px;
+    margin-top: 8px;
+    border: 2px solid #ccc;
+}
+textarea{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.formation-container-btn5 button{
+    width: 110px;
+    height: 40px;
+    border-radius: 15px;
+    border-bottom-right-radius: 40px;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+    margin-top: 18px;
+    margin-right: 55px;
+}
+
+.formation-container-btn5 button:hover {
+    background-color: rgba(25, 25, 25, 0.703);
+    color: white;
+    transition: .5s;
+    border-radius: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}
+
+

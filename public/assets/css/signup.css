@@ -1,0 +1,258 @@
+html{
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+.nav {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    color: black;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 60px;
+}
+
+.nav::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 45px;
+    width: 2px;
+    height: 60px;
+    background-color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item,
+.menu-item1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 10pt;
+    color: black;
+    margin-left: 15px;
+    padding: 8px 10px;
+    border: 2px solid #b0afaf2a;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+}
+
+.menu-item:hover,
+.menu-item1:hover {
+    background-color: #b0afaf2a;
+}
+
+.langue-select {
+    margin-right: 50px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5pt;
+    color: black;
+    padding: 15px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.135);
+    width: 55px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.langue-select:hover,
+.langue-select.select-active:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.langue-select.select-active select {
+    pointer-events: auto;
+}
+
+.langue-select select {
+    background-color: transparent;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15pt;
+    appearance: none;
+    padding-left: 20px;
+    cursor: pointer;
+    pointer-events: none;
+    outline: none;
+    border: none;
+}
+
+.langue-select::after {
+    content: '\25BC';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.langue-select .flag-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.langue-select select option {
+    background-color: #8f94fb;
+    color: white;
+}
+
+.icon-home img {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Main Container */
+.contenaire-contenaireX {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 40px;
+}
+
+.containerX {
+    border-radius: 20px;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+a {
+    color: #8f94fb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.google-btn:hover {
+    background-color: #7a7a7a47;
+}
+
+.google-btn img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: black;
+}
+
+.divider p {
+    margin: 0 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-right: 10px;
+}
+
+.input-group img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.signup-btn {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px 10px 30px 10px;
+
+    background-color: #000;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signup-btn:hover {
+    border-radius: 10px;
+    background-color: #00000063;
+}

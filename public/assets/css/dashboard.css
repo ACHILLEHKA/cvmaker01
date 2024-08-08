@@ -1,0 +1,250 @@
+html{
+    overflow-y: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    width: 100%;
+}
+
+
+
+.nav {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    color: black;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 60px;
+}
+
+.nav::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 45px;
+    width: 2px;
+    height: 60px;
+    background-color: black;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    margin-right: 80px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+
+/* sidebar styling */
+.sidebar {
+    width: 80px;
+    max-height: 500px;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    align-items: center;
+    padding-top: 10px;
+    border-radius: 500px;
+    position: fixed;
+    left: 0;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.nave {
+    justify-content: center;
+    display: block;
+    align-items: center;
+}
+
+/* middle container styling */
+.middle-container {
+    display: flex;
+    margin-left: 150px;
+}
+
+.nav {
+    width: 100%;
+}
+
+.btn-logout {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 10px 10px 20px 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.btn-logout:hover {
+    background-color: #6e2fd3ab; /* Darker red on hover */
+    border-radius: 10px;
+}
+
+
+/* navigation item styling */
+.nav-item {
+    display: block;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nav-item:hover {
+    background-color: white;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    color: #000;
+}
+
+/* container styling */
+.container-personnaliser {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+}
+
+/* name section styling */
+.slt-name {
+    padding: 20px;
+    margin: 10px 0;
+    margin-left: 5px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-bottom: 2px solid #10101048;
+    border-left: 2px solid #10101048;
+    border-right: 2px solid #10101048;
+}
+
+.slt-name span {
+    background-color: #e3c145a1;
+    border-radius: 10px;
+    padding: 5px;
+    border-bottom-right-radius: 30px;
+}
+
+/* phone container styling */
+.phone-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.79);
+    width: 280px;
+    border: none;
+    border-radius: 20px;
+    margin-left: 30px;
+    overflow: hidden;
+    height: 450px;
+    margin-top: 50px;
+}
+
+.phone-container:hover {
+    background-color: gray;
+}
+
+.phone-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* content section styling */
+.content {
+    margin-left: 130px;
+    margin-bottom: 150px !important;
+}
+
+/* CV section styling */
+.cv-section {
+    border-bottom: 2px solid #10101048;
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    margin-left: 5px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-left: 2px solid #10101048;
+    border-right: 2px solid #10101048;
+}
+
+/* share section styling */
+.share-section {
+    border-bottom: 2px solid #10101048;
+    background-color: white;
+    padding: 20px;
+    height: 180px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-top: 30px;
+    display: flex;
+    border-left: 2px solid #10101048;
+    border-right: 2px solid #10101048;
+}
+
+.qr-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qr-code input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 160px;
+    width: 160px;
+    border-radius: 30px;
+    align-items: center;
+    overflow: hidden;
+    border: 5px dotted #ccc;
+}
+
+/* download button styling */
+.btn-download {
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    border-bottom-right-radius: 30px;
+    padding: 8px;
+    border: none;
+}
+
+.btn-download:hover {
+    background-color: #0e0e0ebe;
+    border-radius: 10px;
+}
+
+
