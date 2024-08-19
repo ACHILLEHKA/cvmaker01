@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div class="btns">
-                <a href="{{ route('etape1') }}">
+                <a href="{{ route('etape1') }}" style="text-decoration: none">
                     <button class="submit-button submitBtn2">
                         <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow">
                             <path
@@ -60,8 +60,7 @@
                         Précédent
                     </button>
                 </a>
-
-                <a href="{{ route('etape3') }}">
+                <a href="{{ route('etape3') }}" style="text-decoration: none">
                     <button class="submit-button submitBtn3">
                         Suivant
                         <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow">
@@ -75,5 +74,4 @@
         </div>
     </div>
 </body>
-
 </html>

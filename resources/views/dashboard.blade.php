@@ -16,7 +16,7 @@
         <div class="navbar">
             <div class="nav">CV-MAKER</div>
             <div class="menu">
-                <form method="POST" action="{{ route('logout') }}" >
+                <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button type="submit" class="btn-logout">Déconnexion</button>
                 </form>
@@ -31,15 +31,15 @@
                     <p> <i class="material-icons">person</i></p>
                     <p>Mon compte</p>
                 </a>
-                <a href="{{route('profile.coming_soon')}}" class="nav-item">
+                <a href="{{ route('profile.coming_soon') }}" class="nav-item">
                     <p> <i class="material-icons">C</i></p>
                     <p>Criteres</p>
                 </a>
-                <a href="{{route('profile.jobs')}}" class="nav-item">
+                <a href="{{ route('profile.jobs') }}" class="nav-item">
                     <p> <i class="material-icons">work</i></p>
                     <p>Jobs</p>
                 </a>
-                <a href="{{route('profile.parametres')}}" class="nav-item">
+                <a href="{{ route('profile.parametres') }}" class="nav-item">
                     <p> <i class="material-icons">settings</i>Parametre</p>
                 </a>
 
@@ -49,19 +49,17 @@
         <div class="container-personnaliser">
             <div class="container">
                 <div class="phone-container">
-                    <img src="{{ asset('assets/images/choix1pink.20ff2f6.jpg') }}" alt="Image de CV">
-                    <div class="buttons">
-                        <button class="btn-apercue">Aperçu</button>
-                        <button class="btn-modifier">Modifier</button>
-                    </div>
+                    @yield('content')
+                    <h1>Aucun modele choisie </h1>
                 </div>
                 <section class="content">
                     <div class="slt-name">
                         <h1>Bonjour <span>{{ Auth::user()->name }}</span></h1>
                     </div>
                     <div class="cv-section">
-                        <h2>Exporter le CV en fichier PDF</h2>
-                        <button class="btn-download">Télécharger</button>
+
+                        @yield('telecharger')
+
                     </div>
                     <div class="share-section">
                         <div class="share-text">
@@ -71,6 +69,9 @@
                         <div class="qr-code">
                             <input type="text" placeholder="Code QR privé">
                         </div>
+                    </div>
+                    <div class="choisir" >
+                        <a href="{{ route('choix_modele') }}" style="text-decoration: none; display: flex;justify-content: center; align-items: center;padding: 20px;border-radius:30px;background-color: black;color: white;margin-top: 10px;font-size: 20px">Choisir un autre Modele</a>
                     </div>
                 </section>
             </div>

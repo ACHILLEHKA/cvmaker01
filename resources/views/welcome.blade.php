@@ -22,14 +22,14 @@
                     <a href="{{ route('dashboard') }}">
                         <div class="menu-item">Créer mon CV</div>
                     </a>
-                    <div class="langue-select" onclick="toggleSelect(this)">
+                    {{-- <div class="langue-select" onclick="toggleSelect(this)">
                         <span class="flag-icon flag-icon-fr"></span>
                         <select onchange="changeFlag(this)">
                             <option value="fr" data-flag="flag-icon-fr">FR</option>
                             <option value="eng" data-flag="flag-icon-gb">ENG</option>
                             <option value="nl" data-flag="flag-icon-nl">NL</option>
                         </select>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 

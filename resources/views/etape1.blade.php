@@ -49,11 +49,10 @@
                     <div class="infop">
                         <label for="firstName">Nom:</label>
                         <input type="text" id="firstName" name="firstName" placeholder="Entrez votre Nom"
-                            value="{{ old('firstName') }}" />
+                            value="{{ old('firstName') }}" maxlength="100" pattern="[A-Za-z\s-]+" />
                         @error('firstName')
                             <div class="error-message">{{ $message }}</div>
                         @enderror
-
                         <label for="lastName">Prenom:</label>
                         <input type="text" id="lastName" name="lastName" placeholder="Entrez votre Prenom"
                             value="{{ old('lastName') }}" />
@@ -119,7 +118,7 @@
                     <div class="field-wrapper">
                         <label for="phone">Numéro de Téléphone:</label>
                         <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone"
-                            value="{{ old('phone') }}" />
+                            value="{{ old('phone') }}" style="width:98%" />
                         @error('phone')
                             <div class="error-message">{{ $message }}</div>
                         @enderror
@@ -145,8 +144,8 @@
                 </button>
             </div>
         </form>
-
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script>
@@ -158,38 +157,87 @@
 
         // Function to populate countries and sort them alphabetically
         document.addEventListener('DOMContentLoaded', function() {
+            // Fonction pour ajouter des options aux sélecteurs
+            function populateSelect(selector, countries) {
+                const selectElement = document.querySelector(selector);
+                if (selectElement) {
+                    countries.forEach(country => {
+                        const option = document.createElement("option");
+                        option.value = country.name.common;
+                        option.textContent = country.name.common;
+                        selectElement.appendChild(option);
+                    });
+                }
+            }
+
+            // Récupération des données des pays
             fetch('https://restcountries.com/v3.1/all')
                 .then(response => response.json())
                 .then(data => {
                     data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-                    const nationalitySelect = document.querySelector("#nationality");
-                    const residenceCountrySelect = document.querySelector("#residenceCountry");
-                    data.forEach(country => {
-                        const option = document.createElement("option");
-                        option.value = country.cca2;
-                        option.textContent = country.name.common;
-                        nationalitySelect.appendChild(option.cloneNode(true));
-                        residenceCountrySelect.appendChild(option);
-                    });
+
+                    // Populer les sélecteurs avec les données récupérées
+                    populateSelect("#nationality", data);
+                    populateSelect("#residenceCountry", data);
                 })
-                .catch(error => console.error('Error fetching countries:', error));
+                .catch(error => console.error('Erreur lors de la récupération des pays:', error));
         });
 
         // Initialize intl-tel-input for the phone number field
         document.addEventListener('DOMContentLoaded', function() {
             const phoneInputField = document.querySelector("#phone");
+            const errorMessage = document.querySelector("#error-message");
+
             const phoneInput = window.intlTelInput(phoneInputField, {
-                initialCountry: "auto",
+                initialCountry: "TG", // Définir le pays initial à Togo
                 geoIpLookup: function(success, failure) {
                     fetch('https://ipinfo.io/json')
                         .then(response => response.json())
                         .then(data => success(data.country))
-                        .catch(error => success('US'));
+                        .catch(error => success('TG')); // Togo par défaut si l'IP est introuvable
                 },
-                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                separateDialCode: true, // Affiche l'indicatif du pays séparément
+                preferredCountries: ['TG'], // Togo en premier dans la liste déroulante
+                localizedCountries: {
+                    'TG': 'Togo'
+                } // Nom localisé pour le Togo
             });
+
+            function validatePhoneNumber() {
+                const phoneNumber = phoneInput.getNumber();
+                const countryData = phoneInput.getSelectedCountryData();
+                const maxLength = countryData.maxLength || 15;
+
+                if (phoneNumber.length > maxLength) {
+                    phoneInputField.value = phoneNumber.substring(0, maxLength);
+                    errorMessage.textContent =
+                        `Le numéro ne doit pas dépasser ${maxLength} chiffres pour le pays ${countryData.name}.`;
+                } else {
+                    errorMessage.textContent = '';
+                }
+            }
+
+            phoneInputField.addEventListener('input', function(event) {
+                // Filtrer la saisie pour conserver uniquement les chiffres
+                let value = phoneInputField.value;
+                value = value.replace(/\D/g, ''); // Retirer tout sauf les chiffres
+                phoneInputField.value = value; // Mettre à jour le champ avec uniquement des chiffres
+
+                // Valider la longueur
+                validatePhoneNumber();
+            });
+
+            // Optionnel : Réajuster le champ lorsque le pays change
+            phoneInputField.addEventListener('countrychange', function() {
+                validatePhoneNumber();
+            });
+
+            // Initialiser la validation au chargement
+            validatePhoneNumber();
         });
     </script>
+
 </body>
 
 </html>

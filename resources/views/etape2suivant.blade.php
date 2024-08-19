@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/etape_final.css') }}">
 </head>
 
-<body>
+<body style="overflow-y: hidden">
     <div class="main-container">
         <div class="animation-container">
             <div class="custom-container">
@@ -59,7 +59,7 @@
                     <div class="field-wrapper">
                         <label for="titre_formation">Titre de formation:</label>
                         <input type="text" id="titre_formation" name="titre_formation"
-                            placeholder="ex: (Informatique)" value="{{ old('titre_formation') }}" />
+                            placeholder="ex: (Informatique)" value="{{ old('titre_formation') }}" maxlength="300"/>
                         @error('titre_formation')
                             <div class="error">{{ $message }}</div>
                         @enderror
@@ -67,7 +67,7 @@
                     <div class="field-wrapper">
                         <label for="ecole">Ecole ou Organisation:</label>
                         <input type="text" id="ecole" name="ecole" placeholder="ex: (IAI-TOGO)"
-                            value="{{ old('ecole') }}" />
+                            value="{{ old('ecole') }}" maxlength="300" />
                         @error('ecole')
                             <div class="error">{{ $message }}</div>
                         @enderror
@@ -75,7 +75,7 @@
                     <div class="field-wrapper">
                         <label for="lieu_formation">Lieu de Formation:</label>
                         <input type="text" id="lieu_formation" name="lieu_formation" placeholder="Pays ou ville"
-                            value="{{ old('lieu_formation') }}" />
+                            value="{{ old('lieu_formation') }}" maxlength="300" />
                         @error('lieu_formation')
                             <div class="error">{{ $message }}</div>
                         @enderror
@@ -83,7 +83,7 @@
                     <div class="field-wrapper">
                         <label for="date_debut_formation">Date-Début:</label>
                         <input type="date" id="date_debut_formation" name="date_debut_formation"
-                            value="{{ old('date_debut_formation') }}" />
+                            value="{{ old('date_debut_formation') }}"/>
                         @error('date_debut_formation')
                             <div class="error">{{ $message }}</div>
                         @enderror
@@ -97,8 +97,8 @@
                         @enderror
                     </div>
                 </div>
-                <div class="btns">
-                    <a href="{{ route('etape2') }}">
+                <div class="btns" >
+                    <a href="{{ route('etape2') }}" style="text-decoration: none">
                         <button type="button" class="submit-button cancelBtn"
                             style="background-color: #dc3545; color: white;">
                             Annuler
@@ -109,7 +109,7 @@
                             </svg>
                         </button>
                     </a>
-                    <a href="{{ route('etape2') }}">
+                    <a href="{{ route('etape2') }}" style="text-decoration: none;">
                         <button type="submit" class="submit-button saveBtn"
                             style="background-color: #28a745; color: white;">
                             Enregistrer

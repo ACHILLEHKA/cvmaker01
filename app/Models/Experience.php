@@ -13,4 +13,10 @@ class Experience extends Model
     protected $guarded = [
         'id'
     ];
+
+    public function info()
+{
+    return $this->belongsTo(Info::class);
+}
+
 }

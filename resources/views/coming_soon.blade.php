@@ -41,7 +41,6 @@
                 <a href="{{ route('profile.parametres') }}" class="nav-item">
                     <p> <i class="material-icons">settings</i>Parametre</p>
                 </a>
-
             </nav>
         </aside>
         <div class="container-personnaliser">

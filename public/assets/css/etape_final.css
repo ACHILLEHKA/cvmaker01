@@ -16,7 +16,7 @@
 }
 
 .form-container h2 span {
-    background-color: rgb(249, 255, 80);
+    background-color: rgb(255, 255, 0);
     padding: 10px;
     border-radius: 10px;
     border-bottom-right-radius: 25px;
@@ -151,8 +151,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 700px;
-    max-height: 500px;
-    background-color: white;
+    max-height: 600px;
+    background-color:rgb(255, 239, 221) ;
+    overflow: hidden;
 }
 
 .container h2 {
@@ -228,7 +229,7 @@
 
 .infogrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
     gap: 10px;
 }
 
@@ -266,7 +267,6 @@
     color: white;
     background-color: #000;
     letter-spacing: 0.7px;
-    margin-top: 10px;
     margin-left: 580px;
 }
 
@@ -371,16 +371,13 @@
 .btns {
     display: flex;
     justify-content: space-between;
-    /* Space buttons out */
-    margin-top: 180px;
-    /* Adjust top margin as needed */
+    margin-top: 5%;
 }
+
 .btnse {
     display: flex;
     margin-top: 10px;
     justify-content: space-between;
-    /* Space buttons out */
-    /* Adjust top margin as needed */
 }
 
 
@@ -454,9 +451,10 @@ border-radius: 5px;
 
 .texte-area{
     width: 630px;
-    height: 200px;
+    height: 100px;
     margin-top: 8px;
     border: 2px solid #ccc;
+    resize: none;
 }
 textarea{
     outline: none;
@@ -491,5 +489,8 @@ textarea{
     font-size: 0.875em;
     margin-top: 0.25em;
 }
-
-
+.error-message{
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/etape_final.css') }}">
 </head>
 
-<body>
+<body >
     <div class="main-container">
         <div class="animation-container">
             <div class="custom-container">
@@ -118,11 +118,11 @@
                             <label for="niveau_langue">Niveau:</label>
                             <select id="niveau_langue" class="select-two" name="niveau_langue">
                                 <option value="" disabled selected>Choisir un niveau</option>
-                                <option value="basics">Les bases</option>
-                                <option value="good-notions">Bonne notions</option>
-                                <option value="fluent">Courant</option>
-                                <option value="experienced">Expérimenté</option>
-                                <option value="native">Langue Maternelle</option>
+                                <option value="Les bases">Les bases</option>
+                                <option value="Bonne notions">Bonne notions</option>
+                                <option value="Courant">Courant</option>
+                                <option value="Expérimenté">Expérimenté</option>
+                                <option value="Native">Native</option>
                             </select>
                             @error('niveau_langue')
                                 <div class="error-message">{{ $message }}</div>
@@ -158,7 +158,7 @@
                         Précédent
                     </button>
                 </a>
-                <a href="{{ route('etape5') }}">
+                <a href="{{ route('showLoisirForm') }}">
                     <button class="submit-button submitBtn3">
                         Suivant
                         <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow">

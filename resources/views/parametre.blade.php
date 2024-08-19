@@ -52,71 +52,29 @@
                 <div class="profile-header">
                     <img src="https://via.placeholder.com/80" alt="Profile Picture">
                     <div>
-                        <h1>Achille HODOME</h1>
-                        <p>Date de naissance: 31/12/2004</p>
+                        <h1>{{ $info->nom }} {{ $info->prenom }}</h1>
+                        <p>Date de naissance: {{$info->date_de_naissance}}</p>
                     </div>
                     <button>Modifier</button>
                 </div>
                 <div class="profile-info">
                     <div>
                         <p><strong>Sexe</strong></p>
-                        <p>M</p>
+                        <p>{{$info->sexe}}</p>
                     </div>
                     <div>
                         <p><strong>Nationalité</strong></p>
-                        <p>Togolaise</p>
+                        <p>{{$info->nationalite}}</p>
                     </div>
                     <div>
                         <p><strong>Résidence</strong></p>
-                        <p>LOME, Togo</p>
+                        <p>{{$info->ville}}, {{$info->pays_residence}}</p>
                     </div>
                 </div>
                 <div class="contact-info">
                     <p><strong>Contact</strong></p>
-                    <p>Téléphone: (+228) 92746315</p>
-                    <p>Email: thebestachille4@gmail.com</p>
-                </div>
-                <div class="settings-section">
-                    <div class="setting-section-titre">
-                        <h3>Mon CV</h3>
-                        <h4><i class="material-icons">save</i> Enregistrer</h4>
-                    </div>
-                    <div class="setting">
-                        <label>
-                            <span>Langue du CV</span>
-                        </label>
-                        <div class="description-item">
-                            <div class="description">
-                                <p>
-                                    Les drapeaux seront ajoutés aux langues sélectionnées. Vous pouvez masquer les
-                                    drapeaux
-                                    à
-                                    tout moment.
-
-                            </div>
-                        </p>
-                        <div class="check"> <input type="checkbox" checked>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="setting">
-                        <div class="setting-item">
-
-                            <div class="description">
-                                Traduisez les gros titres du CV dans la langue que vous souhaitez (éducation,
-                                expériences, ...)
-                            </div>
-
-                            <div class="langue-select" onclick="toggleSelect(this)">
-                                <span class="flag-icon flag-icon-fr"></span>
-                                <select onchange="changeFlag(this)">
-                                    <option value="fr" data-flag="flag-icon-fr">FR</option>
-                                    <option value="eng" data-flag="flag-icon-gb">ENG</option>
-                                    <option value="nl" data-flag="flag-icon-nl">NL</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                    <p>Téléphone: {{$info->telephone}}</p>
+                    <p>Email: {{$info->email}}</p>
                 </div>
                 <div class="settings-section">
                     <h3>Mon compte</h3>

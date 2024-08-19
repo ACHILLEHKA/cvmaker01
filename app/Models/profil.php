@@ -9,4 +9,10 @@ class profil extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function info()
+{
+    return $this->belongsTo(Info::class);
+}
+
 }
